@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <input type="text" id="input" placeholder="0">
+        <div class="btn" id="ibtn">
+            <button type="button" onclick="cleardisplay()">AC</button>
+            <button type="button" onclick="display('^')">^</button>
+            <button type="button" onclick="display('%')">%</button>
+            <button type="button" onclick="display('/')">/</button>
+
+            <button type="button" onclick="display(7)">7</button>
+            <button type="button" onclick="display(8)">8</button>
+            <button type="button" onclick="display(9)">9</button>
+            <button type="button" onclick="display('*')">*</button>
+
+            <button type="button" onclick="display(6)">6</button>
+            <button type="button" onclick="display(5)">5</button>
+            <button type="button" onclick="display(4)">4</button>
+            <button type="button" onclick="display('-')">-</button>
+
+            <button type="button" onclick="display(1)">1</button>
+            <button type="button" onclick="display(2)">2</button>
+            <button type="button" onclick="display(3)">3</button>
+            <button type="button" onclick="display('+')">+</button>
+
+            <button type="button" onclick="display(0)" >0</button>
+            <button type="button" onclick="display('.')">.</button>
+            <button type="button" onclick="del()">Del</button>
+            <button type="button" onclick="calculate('=')">=</button>
+        </div>
+    </div>
+</body>
+<script>
+    let screen = document.getElementById("input")
+function display(val){
+    screen.value += val
+}
+function cleardisplay(){
+    screen.value = ' '
+}
+function calculate(){
+    try{
+        let userinput = screen.value;
+        let result = eval(userinput)
+        screen.value = result
+    }
+    catch(err){
+        alert("Invalid")
+    }
+}
+function del(){
+    screen.value = screen.value.slice(0,-1)
+}
+</script>
+</html>

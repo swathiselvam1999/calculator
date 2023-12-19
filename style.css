@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightpink;
+    background-attachment: fixed;
+    color: white;
+}
+.container{
+    width: 400px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: skyblue;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.container h1{
+    padding: 15px;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 5px 5px 5px gray;
+}
+.container input{
+    padding: 10px;
+    border: none;
+    text-align: end;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: inset 5px 5px 5px pink;
+}
+#input:focus{
+    border: none;
+}
+.btn{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 0;
+}
+.btn button{
+    border: 0;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: inset 5px 5px 10px pink;
+    text-wrap: wrap;
+    margin: 5px;
+    cursor: pointer;
+}
+.btn button:hover{
+    border-radius: 35%;
+}
